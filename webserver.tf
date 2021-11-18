@@ -8,7 +8,7 @@ resource "aws_instance" "Terraform_HTW" {
 	    ami                    = "ami-0a49b025fffbbdac6"
 	    instance_type          = "t3.micro"
       vpc_security_group_ids = [aws_security_group.htw_sec_gr.id]
-      user_data = file("tutor_4.sh")
+      user_data = file("html_datei.sh")
 	}
 resource "aws_security_group" "htw_sec_gr" {
   name        = "webserver_sec_gr"
